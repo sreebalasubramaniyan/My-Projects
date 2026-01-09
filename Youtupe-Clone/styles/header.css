@@ -1,0 +1,164 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height : 50px;
+    padding-bottom: 8px;
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    background-color: white;
+    border-bottom : 2px solid rgb(231, 229, 229);
+    z-index: 100;
+}
+.h_1{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+.h1_1{
+    width : 25px;
+    height : 25px;
+    margin-left:30px;
+    margin-right: 15px;
+}
+.h1_2{
+    width : 90px;
+    margin-left: 10px;;
+}
+
+.h_2{
+    flex : 1;
+    margin-left: 30px;
+    margin-right: 20px;
+    max-width: 500px;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.h2_1{
+    flex : 1;
+    width : 0;
+    height : 32px;
+    font-size: 15px;
+    font-family: Roboto,Arial;
+    padding-left: 10px ;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border : 1px solid rgba(128, 128, 128, 0.691);
+    /*inset - shadow inside the element*/
+    box-shadow:inset 2px 2px 2px rgba(128, 128, 128, 0.011);
+    
+}
+.h2_1::placeholder{
+    font-family: Roboto,Arial;
+    font-size: 15px;
+    margin-left : 10px;
+}
+.h2_1:focus {
+  outline: none; /* Removes the default blue/black outline */
+  border: 1px solid blue; /* Changes the border on focus */
+}
+.h2_2{
+    width : 60px;
+    height : 35px;
+    background-color: rgba(239, 239, 239,0.7);
+    border : 1px solid rgba(128, 128, 128, 0.691);
+    /*negative margin substract it and moves it towards the oposite side*/
+    margin-left : -1px;
+    margin-right : 10px;
+}
+.h2_2 ,.h2_3,.h_3 .h3-tool{
+    position : relative;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.h2_2 div,.h2_3 div,.h_3 .h3-tool div{
+    padding: 7px 5px;
+    font-size: 12px;
+    position: absolute;
+    background-color: rgb(122, 120, 120);
+    color : white;
+    border-radius: 2px;
+    top : 50px;
+    opacity: 0;
+    transition: all 0.15s;
+    white-space: nowrap;
+
+}
+
+.h2_2:hover div,.h2_3:hover div,.h_3 .h3-tool:hover div{
+    opacity: 1;
+}
+.h2_2-img{
+    object-fit: contain;
+    width : 58%;
+    margin-top: 4px;
+}
+.h2_3{
+    width : 35px;
+    height : 35px;
+    border-radius : 60%;
+    background-color: rgba(239, 239, 239,0.7);
+    border : none;
+    position : relative;
+}
+.h2_3-img{
+    object-fit: contain;
+    width : 100%;
+}
+
+.h_3{
+    width : 200px;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*flex box shrink in default, to prevent that use flex-shrink : 0*/
+    flex-shrink: 0;
+}
+.h3_1{
+    width : 25px;
+}
+.h3_2{
+    width : 25px;
+    margin-left: 10px;
+}
+.h3_3{
+    width : 25px;
+    margin-left: 10px;
+}
+.h3_3-div{
+    position: relative;
+    display:flex;
+}
+.notifi{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width : 15px;
+    height: 15px;
+    font-size: 10px;
+    background-color: red;
+    border-radius: 50%;
+    color:white;
+
+    position: absolute;
+    top : 0;
+    left:22px;
+    z-index : 100;
+
+}
+.h3_4{
+    width : 30px;
+    margin-right: 20px;
+    border-radius: 50%;
+    margin-top: -5px;
+}

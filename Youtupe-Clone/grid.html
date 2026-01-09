@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    problem with vertical and horizontal method
+    is it leaves a gap between the elements
+
+    so we use grid and it does not leave a gap
+    and it's hive and dynamic
+
+    -->
+    <!--
+    grid - 
+    grid-template-columns : 100px 100px;
+    if you give more dive than the templates
+    then it will wraps around make like matrix
+    -->
+    <div style="
+        display:grid;
+        grid-template-columns:100px 100px;">
+
+        <div style="
+            background-color: lightblue;
+            ">
+            div 1 
+        </div>
+        <div style="
+            background-color: lightgreen;">
+            div 2
+        </div>
+    </div>
+
+    <div style="
+        display:grid;
+        grid-template-columns:100px 100px 200px;
+        margin-top : 20px;
+        ">
+        <div style="
+            background-color: lightblue;
+            ">
+            div 1 
+        </div>
+        <div style="
+            background-color: lightgreen;">
+            div 2
+        </div>
+        <div style="
+            background-color: lightblue;
+            ">
+            div 3
+        </div>
+        <div style="
+            background-color: lightblue;
+            ">
+            div 4
+        </div>
+    </div>
+    <!-- 100px 1fr remaining space-->
+    <div style="
+        display:grid;
+        grid-template-columns:100px 1fr;
+        margin-top : 20px;
+        ">
+        <div style="
+            background-color: lightblue;
+            ">
+            div 1 
+        </div>
+        <div style="
+            background-color: lightgreen;">
+            1fr
+        </div>
+    </div>
+    <!-- 1fr 2fr : remaining space will be divided 1:2 ratio-->
+    <div style="
+        display:grid;
+        grid-template-columns:100px 1fr 2fr;
+        margin-top : 20px;
+        ">
+        <div style="
+            background-color: lightblue;
+            ">
+            div 1 
+        </div>
+        <div style="
+            background-color: lightgreen;">
+            1fr
+        </div>
+        <div style="
+            background-color: lightpink;">
+            2fr
+        </div>
+    </div>
+    <!--making youtube page grid practise
+        column-gap : space btw columns;
+        row-gap : space btw rows;
+    -->
+        <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        margin-top : 20px;
+        column-gap : 40px;
+        row-gap : 30px;
+        ">
+        <div style="
+            background-color: lightblue;
+            height: 200px;">
+            1 fr
+        </div>
+        <div style="
+            background-color: lightgreen;
+            height : 200px">
+            1fr
+        </div>
+        <div style="
+            background-color: lightpink;
+            height : 200px;">
+            1fr
+        </div>
+        <div style="
+            background-color: lightblue;
+            height: 200px;">
+            1 fr
+        </div>
+        <div style="
+            background-color: lightgreen;
+            height : 200px">
+            1fr
+        </div>
+        <div style="
+            background-color: lightpink;
+            height : 200px;">
+            1fr
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felx-Box Practise</title>
+</head>
+<body style="padding-bottom: 1000px;">
+    <!--
+    diplay flex ppty
+    almost same as grid ppty
+
+    but we can give individual size for element unlink grid
+    flex-direction 
+        - row : horizontal alignment(like inline block)
+        - column : vertical alignment(block)
+        - 1fr , here we use flex : 1
+        - 2 fr , flex : 2
+    grid - order of the element matters
+    flex - order of the element does not matter
+    -->
+    <div style="
+        display :flex;
+        flex-direction : row;">
+
+        <div style="background-color: lightblue;
+        width : 100px">
+            1fr
+        </div>
+        <div style="background-color: lightcoral;
+        width : 100px">
+            1fr
+        </div>
+        <div style="background-color: lightgreen;
+        width : 100px;">
+            1fr
+        </div>
+    </div>
+   
+   <div style="
+        display :flex;
+        flex-direction : row;
+        margin-top: 100px;
+        height:70px;
+        border : 2px solid gray;">
+        <div style="background-color: lightblue;
+        flex : 1">
+            1fr
+        </div>
+        <div style="background-color: lightcoral;
+        flex : 1">
+            1fr
+        </div>
+        <div style="background-color: lightgreen;
+        flex : 1">
+            1fr
+        </div>
+    </div>
+   <!--justify content - horizontal alignment
+
+        space-between - no padding
+        space-around - with padding
+        center
+        start - left
+        end - right
+        left
+   -->
+   <div style="
+        display :flex;
+        flex-direction : row;
+        margin-top: 100px;
+        height:70px;
+        border : 2px solid gray;
+        justify-content:">
+        <div style="background-color: lightblue;
+        width:100px">
+        100px
+        </div>
+        <div style="background-color: lightcoral;
+        width:100px;">
+        100px
+        </div>
+        <div style="background-color: lightgreen;
+        width:100px;">
+        100px
+        </div>
+    </div>
+   <!--vertical alignment
+        align-items 
+        stretch - stretch to fill up
+        start - top
+        end - bottom
+        center - center
+   -->
+   <div style="
+        display :flex;
+        flex-direction : row;
+        margin-top: 100px;
+        height:70px;
+        border : 2px solid gray;
+        align-items: center;
+        justify-content: space-between;">
+        <div style="background-color: lightblue;
+        width:100px">
+        100px
+        </div>
+        <div style="background-color: lightcoral;
+        width:100px;">
+        100px
+        </div>
+        <div style="background-color: lightgreen;
+        width:100px;">
+        100px
+        </div>
+    </div>
+</body>
+</html>         

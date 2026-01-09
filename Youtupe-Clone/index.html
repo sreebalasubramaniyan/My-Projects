@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/side-bar.css">
+    
+</head>
+<body>
+    <!--
+    display property
+    1. block - takes the entire line(p,div)
+    2. inline block - takes as much as it needs to(img,input)
+    3. inline - with in the text(strong,span,)
+
+    div - division it's a container
+    -->
+    <!--
+    layout 
+    vertical layout - 2 div with display : block;
+    horizontal layout - 2 div with display : inline-bolck
+    -->
+
+    <!--
+    semantic elements
+    --used for robots to recognise the elements easily
+    header - head
+    nav - sid bar
+    main - main page
+
+    -->
+    <header class="header">
+        <div class="h_1">
+            <img class="h1_1" src="icons/hamburger-menu.svg">
+            <img class="h1_2" src="icons/youtube-logo.svg">
+        </div>
+        <div class="h_2">
+            <input class = "h2_1" type = "text" placeholder="Search" >
+            <button class="h2_2">
+                   <img class="h2_2-img" src="icons/search.svg">
+                   <div >Search</div>
+                </button>
+                <button class="h2_3">
+                    <img class="h2_3-img" src="icons/voice-search-icon.svg ">
+                    <div >Search with your voice</div>
+            </button>
+        </div>
+        <div class="h_3">
+            <div class="h3-tool">
+                <img class="h3_1" src="icons/upload.svg">
+                <div>Create</div>
+            </div>
+            <div class="h3-tool">
+                <img class="h3_2" src="icons/youtube-apps.svg">
+                <div>YouTube apps</div>
+            </div>
+            <div class="h3_3-div">
+                <div class="notifi">3</div>
+                <div class="h3-tool">
+                    <img  class="h3_3" src="icons/notifications.svg">
+                    <div>Notifications</div>
+                </div>
+            </div>
+            
+            <img class="h3_4" src="icons/unnamed.jpg">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="side-bar-div">
+            <img  class="s1" src="icons/home.svg">
+            <p>Home</p>
+        </div>
+        <div class="side-bar-div">
+            <img class="s1" src="icons/explore.svg">
+            <p>Explore</p>
+        </div>
+        <div class="side-bar-div">
+            <img class="s1" src="icons/subscriptions.svg">
+            <p>Subscriptions</p>
+        </div>
+        <div class="side-bar-div">
+            <img class="s1" src="icons/originals.svg">
+            <p>originals</p>
+        </div>
+        <div class="side-bar-div">
+            <img class="s1" src="icons/youtube-music.svg">
+            <p>YouTube Music</p>
+        </div>
+        <div class="side-bar-div">
+            <img class="s1" src="icons/library.svg">
+            <p>Library </p>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class = "page-grid">
+            <div class = "video-container">
+                <div class = "box1">
+                    <img class = "thumbnail" src = "images/thumbnails/t1.jpg">
+                <div class="time">14:20</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-1.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+                    <p class = "channel-name">
+                    Marques Brownlee
+                    </p>
+                    <p class = "stats">
+                    3.4M views · 6 months ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class = "video-container">
+            <div class = "box1">
+                <img class = "thumbnail" src = "images/thumbnails/t2.jpg">
+                <div class="time">22:09</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-2.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    Try Not To Laugh Challenge #9
+                    </p>
+                    <p class = "channel-name">
+                    Markiplier
+                    </p>
+                    <p class = "stats">
+                    19M views · 4 years ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "video-container">
+            <div class = "box1">
+                <img class = "thumbnail" src = "images/thumbnails/t3.jpg">
+                <div class="time">11:17</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-3.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    Crazy Tik Toks Taken Moments Before DISASTER
+                    </p>
+                    <p class = "channel-name">
+                    SSSniperWolf
+                    </p>
+                    <p class = "stats">
+                    12M views · 1 year ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class = "video-container">
+            <div class = "box1">
+                <img class = "thumbnail" src = "images/thumbnails/t4.jpg"
+                style="object-fit: contain;width : 100%;">
+                <div class="time">19:59</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-4.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    The Simplest Math Problem No One Can Solve - Collatz Conjecture
+                    </p>
+                    <p class = "channel-name">
+                    Veritasium
+                    </p>
+                    <p class = "stats">
+                    18M views · 4 months ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "video-container">
+            <div class = "box1">
+                <img class = "thumbnail" src = "images/thumbnails/t5.jpg">
+                <div class="time">10:13</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-5.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    Kadane's Algorithm to Maximum Sum Subarray Problem
+                    </p>
+                    <p class = "channel-name">
+                    CS Dojo
+                    </p>
+                    <p class = "stats">
+                    519K views · 5 years ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class = "video-container">
+            <div class = "box1">
+                <img class = "thumbnail" src = "images/thumbnails/t6.jpg">
+                <div class="time">7:12</div> 
+            </div>
+            <div class = "box2">
+                <div class = "box2_1">
+                    <img class = "channel-logo" src = "images/logo/channel-6.jpeg">
+                </div>
+                
+                <div class = "box2_2">
+                    <p class = "title">
+                    Anything You Can Fit In The Circle I’ll Pay For
+                    </p>
+                    <p class = "channel-name">
+                    MrBeast
+                    </p>
+                    <p class = "stats">
+                    141M views · 1 year ago
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </main>
+    
+</body>
+</html>

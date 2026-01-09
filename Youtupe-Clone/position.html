@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position-html</title>
+</head>
+<body style="
+    height: 3000px;
+    padding-top: 90px;
+    padding-left: 70px;
+    margin : 0;
+">
+    <!--
+    position - used for stick the element and paste a element on top of another one
+    ----static - default
+    ----fixed - placed in the browser widnow(like paste on our screen)
+                does not move when you scroll
+            header
+            top,bottom,left,rigth
+
+    ----absolute- placed in the browser page(like actuall body)
+                  move whey you scroll
+    ----absolute inside fixed
+                relative to the fixed element and does not scroll
+    ----relative - to create numbers on the notifications
+                relative the the elements and we can scroll
+    
+    -->
+    <!--
+    z-index - tells which element appears on the top and which on the bottom
+    higher z-index means high priority of appear on the top of all others
+
+    
+    -->
+    <div style="background-color: aqua;
+    width:100%;height:70px;
+    position : fixed;
+    top :0;
+    left : 0;
+    right : 0;
+    left : 0;
+    z-index : 1;
+    ">
+    Header
+    </div>
+    <div style="background-color: lightgrey;
+    width : 50px;
+    position : fixed;
+    top : 70px;
+    bottom : 0;
+    left : 0;
+
+    ">
+        sidebar
+        <div style="
+        background-color: red;
+        position: absolute;
+        top:0;
+        right:0;
+        ">X
+        </div>
+
+    </div>
+
+    <div style="
+    background-color: green;
+    position: absolute;
+    top:200px;
+    ">absolute
+    </div>
+    
+    <div style="background-color: lawngreen;
+    width:300px;height:300px;
+    position : static;
+    z-index:11;">
+    Div1
+    </div>
+    
+    <div style="background-color: lightcoral;
+    width:300px;height:300px;
+    position : static;
+    position: relative;">
+    Div1
+    <div style="background-color: black;
+    color:white;
+    position: absolute;
+    bottom:10px;
+    right:10px;
+    width:30px;
+    ">
+    5:00
+    </div>
+    </div>
+    
+
+    
+</body>
+</html>
