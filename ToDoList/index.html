@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        body{
+            width : 600px;
+            margin : 20px auto;
+            display : flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+        }
+        .contanier{
+            background-color: lightblue;
+            padding : 30px;
+        }
+        .header{
+            display : grid;
+            grid-template-columns:  200px 200px 100px;
+            align-items : center;
+            gap : 10px;
+            margin-bottom : 10px;
+        }
+        .new_task{
+            display : grid;
+            grid-template-columns: 40px 200px 150px 100px;
+            align-items : center;
+            gap : 10px;
+            margin-bottom : 10px;
+            
+        }
+        .display{
+            display : flex;
+            flex-direction: column;
+            height: 500px;
+            background-color: lightpink;
+            padding :  10px;
+        }
+        .header input{
+            font-size: 20px;
+            padding : 5px;
+        }
+        button{
+            font-size: 20px;
+            border-radius : 4px;
+            border : none;
+            padding : 7px 25px;
+        }
+        .add{
+            background-color : green;
+        }
+        .del{
+            background-color: red;
+            margin-left : 2px;
+        }
+        .new_task input{
+            width : 50%;
+            height: 50%;
+        }
+        .new_task p{
+            font-size: 25px;
+            white-space: wrap;
+            overflow-wrap: break-word;
+            margin : 0;
+            padding : 5px;
+        }
+        .complete p{
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <div class="contanier">
+        <header class="header">
+            <input type="text" placeholder="Todo name" class="tasks" >
+            <input type="date"  class="date" >
+            <button type="button" class="add" onclick="f()">Add</button>
+        </header>
+
+        <main class="display">
+
+        </main>
+
+    </div>
+
+    <script>
+        const colors = [
+        "#FF5733", "#33FF57", "#3357FF", "#F39C12", "#8E44AD",
+        "#1ABC9C", "#E74C3C", "#2ECC71", "#3498DB", "#9B59B6",
+        "#16A085", "#27AE60", "#2980B9", "#D35400", "#C0392B",
+        "#7F8C8D", "#BDC3C7", "#34495E", "#95A5A6", "#F1C40F",
+        "crimson", "teal", "coral", "indigo", "tomato",
+        "gold", "slateblue", "darkcyan", "orchid", "seagreen"
+        ];
+        var count = 0;
+        var sz = colors.length;
+        function f(){
+            const task = document.querySelector(".tasks");
+            const dt = document.querySelector(".date")
+            const display = document.querySelector(".display");
+            const val = task.value;
+            const date = dt.value;
+            const content = val +"           "+date;
+        
+            if(val===""){
+                alert("Please Enter the Todo Name");
+                return;
+            }
+            if(date===""){
+                alert("Please Enter the date")
+            }
+            const new_task = document.createElement("div");
+            new_task.className = "new_task"
+            new_task.innerHTML = `
+                <input type="checkbox" onclick="comp(event)">
+                <p clas="task_name">${val}</p>
+                <p clas="task_date">${date}</p>
+                <button class="del" onclick="del(event)">delete</button>
+                `;
+            
+           
+
+            display.appendChild(new_task)
+            console.log(content,new_task);
+            count = (count+1)%sz;
+        }
+        function comp(event){
+            const ele = event.target.parentNode;
+            
+            ele.classList.toggle("complete");
+
+
+        }
+        function del(event){
+            const del_task = event.target.parentNode;
+            console.log(del_task)
+            const display = document.querySelector(".display");
+            display.removeChild(del_task)
+        }
+    </script>
+</body>
+</html>
